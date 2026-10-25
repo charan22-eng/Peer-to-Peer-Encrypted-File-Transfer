@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-bg: #0F131A;
+  --color-accent: #FFB454;
+  --color-accent-dim: #6B5330;
+  --color-ok: #5FD98A;
+  --color-warn: #E8685D;
+  --color-text: #E8EBEF;
+  --color-text-dim: #8B95A5;
+  
+  /* Map older generic names used by Interface to these specific ones to prevent breaking */
+  --color-brand-primary: #FFB454;
+  --color-brand-secondary: #6B5330;
+  --color-surface-base: #0F131A;
+  --color-surface-overlay: rgba(15, 19, 26, 0.85);
+  --color-text-primary: #E8EBEF;
+  --color-text-secondary: #8B95A5;
+  --color-text-muted: rgba(139, 149, 165, 0.5);
+  --color-status-success: #5FD98A;
+  --color-status-error: #E8685D;
+}
+
+:root {
+  color-scheme: dark;
+  
+  --bg: #0F131A;
+  --accent: #FFB454;
+  --accent-dim: #6B5330;
+  --ok: #5FD98A;
+  --warn: #E8685D;
+  --text: #E8EBEF;
+  --text-dim: #8B95A5;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+#ui-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+#ui-layer > * {
+  pointer-events: auto;
+}
