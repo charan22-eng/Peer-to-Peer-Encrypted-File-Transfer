@@ -1,0 +1,24 @@
+[
+  { 
+    "step": 1,
+    "description": "One JSON message",
+    "payload": { 
+      "type": "file-meta", 
+      "name": "string", 
+      "size": "number", 
+      "mime": "string", 
+      "hash": "string" 
+    }
+  },
+  {
+    "step": 2,
+    "description": "size/CHUNK_SIZE binary ArrayBuffer messages, each up to 16384 bytes, in order"
+  },
+  {
+    "step": 3,
+    "description": "One JSON message",
+    "payload": { 
+      "type": "file-done" 
+    }
+  }
+]
