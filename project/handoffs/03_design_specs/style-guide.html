@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peer/Link Style Guide</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      padding: 2rem;
+    }
+    .swatch {
+      width: 50px; height: 50px; border-radius: 8px; display: inline-block; margin-right: 1rem; border: 1px solid var(--border);
+    }
+    .surface-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .glass-panel {
+      background: rgba(22, 28, 38, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(42, 51, 65, 0.5);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    h1 { font-size: 56px; font-weight: 600; letter-spacing: -0.02em; }
+    .mono { font-family: var(--font-mono); color: var(--accent); }
+    button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    button:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <h1>Peer/Link</h1>
+  <p style="color: var(--text-dim);">Awwwards-Tier 3D WebRTC Transfer</p>
+  
+  <h2>Colors</h2>
+  <div style="display: flex;">
+    <div class="swatch" style="background: var(--bg);"></div>
+    <div class="swatch" style="background: var(--surface);"></div>
+    <div class="swatch" style="background: var(--border);"></div>
+    <div class="swatch" style="background: var(--accent);"></div>
+    <div class="swatch" style="background: var(--ok);"></div>
+    <div class="swatch" style="background: var(--warn);"></div>
+  </div>
+
+  <h2>Surfaces</h2>
+  <div class="surface-panel">
+    <h3>Standard Surface</h3>
+    <p>Used for standard cards and UI elements.</p>
+  </div>
+  
+  <div class="glass-panel">
+    <h3>Glassmorphism Surface</h3>
+    <p>Reserved strictly for the room-code card and active transfer panel.</p>
+  </div>
+
+  <h2>Typography</h2>
+  <p>Standard UI text uses Inter.</p>
+  <p class="mono">ROOM-CODE-123456</p>
+  <p class="mono">8.4 MB / 12.1 MB</p>
+
+  <h2>Components</h2>
+  <button>Initiate Transfer</button>
+</body>
+</html>
