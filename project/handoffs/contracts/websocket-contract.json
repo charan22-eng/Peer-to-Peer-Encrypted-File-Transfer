@@ -1,0 +1,16 @@
+{
+  "clientToServer": [
+    { "type": "create-room" },
+    { "type": "join-room", "roomCode": "string" },
+    { "type": "signal", "payload": "SignalPayload" }
+  ],
+  "serverToClient": [
+    { "type": "room-created", "roomCode": "string" },
+    { "type": "room-joined", "roomCode": "string" },
+    { "type": "peer-joined" },
+    { "type": "signal", "payload": "SignalPayload" },
+    { "type": "peer-left" },
+    { "type": "error", "message": "string" }
+  ],
+  "SignalPayload": "Opaque to the server — forward it, don't interpret it — and is one of: { sdp: RTCSessionDescriptionInit } OR { candidate: RTCIceCandidateInit }"
+}
