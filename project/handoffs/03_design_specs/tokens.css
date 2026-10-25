@@ -1,0 +1,20 @@
+:root {
+  /* Colors */
+  --bg: #0F131A;
+  --surface: #161C26;
+  --surface-2: #1D2531;
+  --border: #2A3341;
+  --text: #E8EBEF;
+  --text-dim: #8B95A5;
+  --accent: #FFB454;
+  --accent-dim: #6B5330;
+  --ok: #5FD98A;
+  --warn: #E8685D;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Spacing Base */
+  --space-unit: 4px;
+}
